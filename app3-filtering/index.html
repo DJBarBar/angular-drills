@@ -1,6 +1,14 @@
-<html>
-	<body>
-		Something
+<html ng-app="app3">
+	<body ng-controller="mainCtrl">
+		<input type="text" placeholder="Search..." ng-model="peoplesFilter">
+		<div class="" ng-repeat="p in peoples | filter: peoplesFilter">
+			<ul>
+				<li>{{p.name}}</li>
+				<li>{{p.email}}</li>
+				<li>{{p.dateEmployed}}</li>
+				<li>{{p.phone}}</li>
+			</ul>
+		</div>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
